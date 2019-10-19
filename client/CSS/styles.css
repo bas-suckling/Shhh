@@ -8,11 +8,11 @@ h2 {
     line-height: 1.5
 }
   /* Title section */
-#title {
+.title {
     background-color: #000e5a;
 }
 
-#title h1{
+.title h1{
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
     font-size: 3rem;
@@ -188,7 +188,7 @@ h2 {
     
 }
 
-/*Login Styling*/
+/*Login & Sign Up Styling*/
 
 #login-page {
     padding: 10% 15% 10% 15%;
@@ -202,5 +202,17 @@ h2 {
     padding: 50px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px 0px white;
-    
 }
+
+/*How it works styling */
+
+.noPaddingBottom {
+    padding-bottom: 0%;
+}
+
+#howItWorks {
+    background-color: #000e5a;
+    color: white;
+}
+
+

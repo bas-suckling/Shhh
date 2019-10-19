@@ -13,7 +13,7 @@ Chat App
 
 
 Encrpytion 
-
+- Might start with simple encryption using 
 - diffie-helman key exchange
 - encryption and decryption program using block cypher
 
