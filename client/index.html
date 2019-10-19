@@ -1,21 +1,123 @@
-<!doctype html>
-<html ng-app="myApp">  
-    <head>    
-        <title>Shhh Encrpyted Chat</title>    
-        <link rel="stylesheet" href="./CSS/styles.css">    
-        <script src="../client/lib/angular/angular.js"></script>    
-        <script src="/socket.io/socket.io.js"></script>    
-        <script src="http://code.jquery.com/jquery-1.11.1.js">    </script>
-        <script src="/js/app.js"></script>  
-    </head>  
-            
-    <body ng-controller="mainController">
-        <h1>Send and receive messages below</h1>
-        <ul id="messages"></ul>    
-        <div>      
-            <input id="m" ng-model="message" autocomplete="off" />      
-            <button ng-click="send()">Send</button>    
-        </div>  
-    </body>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Shhh. - Encrypted Messaging</title>
+  
+  <!-- // google fonts  -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,900|Ubuntu&display=swap" rel="stylesheet">  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+ 
+  <!-- css stylesheets -->
+  <link rel="stylesheet" href="CSS/bootstrap.css">
+  <link rel="stylesheet" href="CSS/styles.css">
+  
+  <!-- Bootstrap scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+  <!-- Font awesome icons -->
+  <script src="https://kit.fontawesome.com/4de4fc428a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <section id="title">
+    <div class="container-fluid">
+      <!-- Nav Bar -->
+      <nav class="navbar navbar-expand-lg navbar-dark" style="padding-left:0px;">
+      
+          <a class="navbar-brand" href="">Shhh.</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLinks" aria-controls="navbarlinks" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarLinks">
+              
+              <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                      <a class="nav-link" href="#HowItWorks">How it Works</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#cta">Contact</a>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+
+
+
+      <!-- Title -->
+
+      <div id="landing">
+        <div class="row">
+          <div class="col-lg-6">
+            <h1>End to End encrypted messaging not even an authoritarian government can crack.</h1>
+            <button href="./signup.html" type="button" class="btn btn-outline-light btn-lg downloadButton">Sign Up</button>
+            <button href="./login.html" type="button" class="btn btn-outline-light btn-lg downloadButton">Login</button>
+          </div>
+          <div class="col-lg-6">
+            <img src="images/Encrypted-Messaging-Flat-Icon.png" alt="encrypted message image" class="titleImage">
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Features -->
+
+  <section id="features">
+    <div class="row" >
+      <div class="featureBox col-lg-4">
+        <i class="fas fa-user-secret fa-4x icons"></i>
+        <h3>End to End Encryption</h3>
+        <p>Loren Ipsum blah blah blah</p>
+      </div>
+      <div class="featureBox col-lg-4">
+        <i class="fas fa-fingerprint fa-4x icons"></i>
+        <h3>No Personal Information Required</h3>
+        <p>New users can generate random usernames.</p>
+      </div>
+      <div class="featureBox col-lg-4">
+        <i class="fas fa-trash-alt fa-4x icons" ></i>
+        <h3>Message Self-Destruction</h3>
+        <p>Messages are automatically erased within 24 hours, and can be set to custom timeframes.</p>
+      </div>
+    </div> 
+
+  </section>
+
+
+
+  </section>
+
+
+  <!-- Call to Action -->
+
+  <section id="cta">
+
+    <h3>Your Message Privacy is Maintained No Matter What.</h3>
+    <button type="button" class="btn btn-outline-light btn-lg downloadButton">Sign Up</button>
+    <button type="button" class="btn btn-outline-light btn-lg downloadButton">Login</button>
+
     
+  </section>
+
+
+  <!-- Footer -->
+
+  <footer id="footer">
+
+    <i class="fab fa-twitter smallIcon"></i>
+    <i class="fas fa-envelope smallIcon"></i>
+
+    <p>© Copyright 2019 Shhh.</p>
+
+  </footer>
+
+
+</body>
+
 </html>
