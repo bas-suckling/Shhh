@@ -1,12 +1,27 @@
-// var app = require('express')();
-// var http = require('http').Server(app);
+const express = require('express');
+const server = express()
+const path = require('path');
+
+server.use(express.static('public'))
+server.use(express.urlencoded({extended: true}))
+
+server.get('/', function(req, res){
+    res.sendFile(path.resolve(__dirname+"/../client/index.html"));
+});
+
+server.get('/:page', function (req, res){
+    let {page} = req.params
+    res.sendFile(path.resolve(__dirname + "/../client/" + page + ".html"))
+})
+
+
+module.exports = server;
+
+
+
+
+
 // var io = require('socket.io')(http);
-// var path = require('path');
-
-// app.get('/', function(req, res){
-//     res.sendFile(path.resolve(__dirname+"/../client/index.html"));
-// });
-
 // io.on('connection', function(socket){
 //     console.log('user connected');  
     
@@ -17,5 +32,3 @@
 //         console.log('user disconnected');  
 //     });
 // });
-
-// http.listen(3000, function(){  console.log('listening on port 3000');});

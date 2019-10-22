@@ -2,6 +2,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
   }
+
 h2 {
     font-weight: bold;
     font-size: 3rem;
@@ -215,4 +216,10 @@ h2 {
     color: white;
 }
 
+/* page not found */
+
+#pageNotFound{
+    background-color: #000e5a;
+    padding: 0% 15% 10% 15%;
+}
 
