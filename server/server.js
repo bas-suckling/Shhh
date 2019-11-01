@@ -1,7 +1,10 @@
 const express = require('express');
 const server = express()
-const path = require('path');
 const hbs = require('express-handlebars')
+const login = require('../routes/login')
+const signup = require('../routes/signup')
+const howitworks = require('../routes/howitworks')
+
 
 
 
@@ -13,6 +16,9 @@ server.engine('hbs', hbs({
 server.set('view engine', 'hbs') // allow access to hbs file directory
 server.use(express.static('public'))
 server.use(express.urlencoded({extended: true}))
+server.use('/login', login)
+server.use('/signup', signup)
+server.use('/howitworks', howitworks)
 
 
 server.get('/', (req, res) => {
@@ -20,11 +26,11 @@ server.get('/', (req, res) => {
 })
 
 server.get('/signup', (req, res) => {
-    res.render('signup')
+    res.send(signup)
 })
 
 server.get('/login', (req, res) => {
-    res.render('login')
+    res.send(login)
 })
 
 server.get('/howitworks', (req, res) => {
