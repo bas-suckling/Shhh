@@ -1,9 +1,9 @@
 const express = require('express');
 const server = express()
 const hbs = require('express-handlebars')
-const login = require('../routes/login')
-const signup = require('../routes/signup')
-const howitworks = require('../routes/howitworks')
+const login = require('./routes/login')
+const signup = require('./routes/signup')
+const howitworks = require('./routes/howitworks')
 
 
 
