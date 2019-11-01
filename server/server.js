@@ -1,19 +1,43 @@
 const express = require('express');
 const server = express()
 const path = require('path');
+const hbs = require('express-handlebars')
 
+
+
+server.engine('hbs', hbs({
+    defaultLayout: 'main',
+    extname: 'hbs'
+  }))
+
+server.set('view engine', 'hbs') // allow access to hbs file directory
 server.use(express.static('public'))
 server.use(express.urlencoded({extended: true}))
 
-server.get('/', function(req, res){
-    res.sendFile(path.resolve(__dirname+"/../client/index.html"));
-});
 
-server.get('/:page', function (req, res){
-    let {page} = req.params
-    res.sendFile(path.resolve(__dirname + "/../client/" + page + ".html"))
+server.get('/', (req, res) => {
+    res.render('home')
 })
 
+server.get('/signup', (req, res) => {
+    res.render('signup')
+})
+
+server.get('/login', (req, res) => {
+    res.render('login')
+})
+
+server.get('/howitworks', (req, res) => {
+    res.render('howitworks')
+})
+
+server.get('/chat', (req, res) => {
+    res.render('chat')
+})
+
+server.get('/pagenotfound', (req, res) => {
+    res.render('pagenotfound')
+})
 
 module.exports = server;
 

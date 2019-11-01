@@ -55,6 +55,9 @@ h2 {
     color:white;
 }
 
+.nav-container {
+    padding-bottom: 3%;
+}
 /* Image section  */
 
 
@@ -192,7 +195,7 @@ h2 {
 /*Login & Sign Up Styling*/
 
 #login-page {
-    padding: 10% 15% 10% 15%;
+    padding: 0% 15% 10% 15%;
     background-color: #000e5a;
     color: white;
     
@@ -220,6 +223,6 @@ h2 {
 
 #pageNotFound{
     background-color: #000e5a;
-    padding: 0% 15% 10% 15%;
+    padding: 0% 15% 20% 15%;
 }
 
