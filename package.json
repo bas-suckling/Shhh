@@ -9,6 +9,7 @@
     "handlebars": "^4.5.1",
     "knex": "^0.20.1",
     "nodejs": "^0.0.0",
+    "pg": "^7.12.1",
     "socket.io": "^2.3.0",
     "sqlite3": "^4.1.0"
   },
@@ -18,7 +19,7 @@
   },
   "scripts": {
     "test": "\"test\"",
-    "start": "node index.js",
+    "start": "node server/index.js",
     "debug": "nodemon server/index.js",
     "postinstall": "knex migrate:latest"
   },
