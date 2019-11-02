@@ -4,21 +4,22 @@
     </div>
 </section>
 
-<section class="container-fluid" id="login-page">
+<section class="container-fluid form-layout" >
     <section class="row justify-content-center">
-        <form class="form-container" id="form-login">
+        <form class="form-container" id="form-signup" action="/signup/newUser" method="POST">
             <a class="navbar-brand" href="index.html">Shhh.</a>
-            <p>Use the button below to randomly generate <br> a username.</p>
+            {{!-- <p>Use the button below to randomly generate <br> a username.</p> --}}
             <br>
             <div class="form-group">
-                <input type="username" class="form-control" id="inputUsername" placeholder="Username">
+                <input name="username" class="form-control" id="inputUsername" placeholder="Username">
             </div>
-            <div class="form-group">
+            {{!-- <div class="form-group">
                 <button type="submit" class="btn btn-outline-light btn-lg btn-block">Generate Username</button>
                 <br>
-            </div>
+            </div> --}}
             <div class="form-group">
-                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                <input name="password" type="password" class="form-control" id="inputPassword" placeholder="Password">
+                <br>
             </div>
             <button type="submit" class="btn btn-outline-light btn-lg btn-block">Sign Up</button>
         </form>

@@ -194,7 +194,7 @@ h2 {
 
 /*Login & Sign Up Styling*/
 
-#login-page {
+.form-layout {
     padding: 0% 15% 10% 15%;
     background-color: #000e5a;
     color: white;
